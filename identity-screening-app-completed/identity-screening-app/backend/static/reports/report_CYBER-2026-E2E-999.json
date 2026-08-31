@@ -1,0 +1,128 @@
+{
+  "case_id": "CYBER-2026-E2E-999",
+  "report_title": "AI FORENSIC IDENTITY SCREENING & CYBERCRIME INCIDENT REPORT",
+  "generated_timestamp": "2026-08-29T12:58:48.054524+00:00",
+  "submission_portal": {
+    "name": "Indian National Cyber Crime Reporting Portal (Ministry of Home Affairs)",
+    "official_url": "https://www.cybercrime.gov.in/",
+    "national_helpline": "1930 (Toll-Free 24x7)",
+    "jurisdiction": "National Cyber Crime Reporting Portal / Central Incident Repository",
+    "submission_status": "EVIDENCE_PREPARED_FOR_INVESTIGATOR_REVIEW",
+    "submission_notice": "IMPORTANT: This dossier contains algorithmic forensic evidence and digital hashes compiled for compliance audit, law enforcement referral, and official submission by authorized personnel. No automated submission to police databases has occurred."
+  },
+  "evidence_file": {
+    "filename": "driver_license_marcus.jpg",
+    "size_bytes": 83,
+    "sha256_digest": "05da83d71a0c09a387124133d014f8a116204ecb0d82cf7b958f06e98c5a621c",
+    "mime_type": "image/jpeg"
+  },
+  "screening_verdict": {
+    "final_decision": "HIGH RISK",
+    "risk_level": "HIGH",
+    "composite_risk_score": 33.4,
+    "tampering_score": 83.1,
+    "recommended_action": "REJECT / ESCALATE TO CYBER CELL"
+  },
+  "forensic_tampering_findings": {
+    "analysis_engine": "OpenCV-Forensics-ELA-v2.0",
+    "anomaly_zones_detected": 4,
+    "suspicious_regions": [
+      {
+        "id": "sr_1",
+        "title": "Compression Anomaly Region #1",
+        "description": "High Error Level Analysis (ELA) variance detected; potential digital copy-paste or photo replacement boundary.",
+        "severity": "HIGH",
+        "type": "ELA_ARTIFACT",
+        "boundingBox": {
+          "x": 45.4,
+          "y": 56.8,
+          "width": 8.2,
+          "height": 8.2
+        }
+      },
+      {
+        "id": "sr_2",
+        "title": "Compression Anomaly Region #2",
+        "description": "High Error Level Analysis (ELA) variance detected; potential digital copy-paste or photo replacement boundary.",
+        "severity": "HIGH",
+        "type": "ELA_ARTIFACT",
+        "boundingBox": {
+          "x": 27.4,
+          "y": 36.2,
+          "width": 13.1,
+          "height": 17.6
+        }
+      },
+      {
+        "id": "sr_3",
+        "title": "Compression Anomaly Region #3",
+        "description": "High Error Level Analysis (ELA) variance detected; potential digital copy-paste or photo replacement boundary.",
+        "severity": "HIGH",
+        "type": "ELA_ARTIFACT",
+        "boundingBox": {
+          "x": 38.6,
+          "y": 36.0,
+          "width": 8.8,
+          "height": 9.6
+        }
+      },
+      {
+        "id": "sr_4",
+        "title": "Compression Anomaly Region #4",
+        "description": "High Error Level Analysis (ELA) variance detected; potential digital copy-paste or photo replacement boundary.",
+        "severity": "HIGH",
+        "type": "ELA_ARTIFACT",
+        "boundingBox": {
+          "x": 4.2,
+          "y": 22.8,
+          "width": 21.5,
+          "height": 42.4
+        }
+      }
+    ],
+    "forensic_flags": [
+      "High Error Level Analysis (ELA) compression variance detected (Std: 21.8).",
+      "Splicing artifacts identified around photo or text field boundaries."
+    ]
+  },
+  "extracted_ocr_data": {
+    "is_readable": true,
+    "confidence_score": 98.9,
+    "document_type": "UNKNOWN",
+    "name": "MARCUSVREYES",
+    "dob": "01/12/1995",
+    "doc_number": null,
+    "expiry_date": null,
+    "address": null,
+    "raw_text_snippet": "DRIVERLICENSE-STATEOFPACIFICA\nNAME:MARCUSVREYES\nDLN0:DL-9938102-X\nD0B:01/12/1995\nEXPIRY:12/31/2028\nPDF417"
+  },
+  "mrz_validation_findings": {
+    "mrz_detected": false,
+    "is_applicable": false,
+    "status": "NOT_APPLICABLE",
+    "format": "NONE",
+    "checksums_passed": true,
+    "checksum_details": [],
+    "mrz_parsed_fields": {
+      "document_type": null,
+      "issuing_country": null,
+      "surname": null,
+      "given_names": null,
+      "document_number": null,
+      "nationality": null,
+      "dob": null,
+      "sex": null,
+      "expiry_date": null,
+      "optional_data": null
+    }
+  },
+  "barcode_qr_findings": {
+    "detected": false,
+    "status": "NOT_FOUND",
+    "format": "NONE",
+    "cross_match_verdict": "No QR Code or 1D/2D Barcode detected on the document surface.",
+    "comparisons": [],
+    "is_genuine_proof_warning": "Decoding a barcode only verifies data encoding; physical security features still apply."
+  },
+  "analyst_notes": "Automated E2E validation test case."
+}
