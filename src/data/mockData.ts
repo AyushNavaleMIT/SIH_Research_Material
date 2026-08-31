@@ -1,0 +1,165 @@
+import type { 
+  SampleCase, 
+  DocumentAnalysisResult, 
+  FaceVerificationResult, 
+  AggregatedRiskDecision,
+  ExplainableReason 
+} from '../types';
+
+export const EMPTY_DOC_RESULT: DocumentAnalysisResult = {
+  documentId: 'XXXXX',
+  documentType: 'NOT_UPLOADED',
+  source_type: 'UNKNOWN',
+  source_display: 'No Document Uploaded',
+  is_digital: false,
+  fileName: 'No file uploaded',
+  uploadTimestamp: '--/--/----',
+  imageUrl: '',
+  tamperingScore: 0,
+  compositeRiskScore: 0,
+  status: 'LOW',
+  finalDecision: 'VERIFIED',
+  recaptureRequired: false,
+  qualityGate: {
+    passed: true,
+    status: 'PASSED',
+    source_type: 'UNKNOWN',
+    source_display: 'Pending Upload',
+    is_digital: false,
+    has_critical_issues: false,
+    issues: [],
+    warnings: [],
+    recommendation: 'Please upload an identity document to begin verification.',
+    metrics: {
+      resolution: '0x0',
+      blur_score: 0,
+      mean_luminance: 0,
+      contrast_std: 0,
+      glare_ratio_pct: 0,
+      skew_angle_deg: 0,
+      glare_applicable: false,
+      blur_applicable: false,
+    },
+  },
+  analysisMethods: [],
+  suspiciousRegions: [],
+  detectedText: [
+    { field: 'Full Name', value: 'XYZ', isConsistent: true },
+    { field: 'Document ID', value: 'XXXXX', isConsistent: true },
+    { field: 'Date of Birth', value: '--/--/----', isConsistent: true },
+    { field: 'Address', value: 'XYZ', isConsistent: true },
+    { field: 'Gender', value: '--', isConsistent: true },
+  ],
+  suspiciousReasons: [],
+  evidenceSignals: {},
+  ocr: {
+    isReadable: false,
+    overallConfidence: 0,
+    rawText: '',
+    lines: [],
+    fields: {
+      documentType: 'NOT_UPLOADED',
+      name: 'XYZ',
+      dob: '--/--/----',
+      docNumber: 'XXXXX',
+      address: 'XYZ',
+      gender: '--',
+    },
+    detectedFieldCount: 0,
+  },
+  aadhaarValidation: undefined,
+  panValidation: undefined,
+  mrz: undefined,
+  barcode: undefined,
+};
+
+export const EMPTY_FACE_RESULT: FaceVerificationResult = {
+  success: false,
+  status: 'FAILED',
+  similarityScore: 0,
+  matchConfidence: 0,
+  faceDetected: false,
+  documentFaceUrl: '',
+  liveCapturedFaceUrl: '',
+  details: [],
+  message: 'Biometric face match pending live capture.',
+};
+
+const DEFAULT_REASON: ExplainableReason = {
+  id: 'r_initial',
+  title: 'Session Initialized',
+  category: 'DOCUMENT',
+  severity: 'LOW',
+  impactScore: 0,
+  featureWeight: 0,
+  description: 'Verification pending user document upload.',
+  evidence: 'Awaiting input.',
+  sourceModule: 'SYSTEM'
+};
+
+export const EMPTY_RISK_DECISION: AggregatedRiskDecision = {
+  caseId: 'CASE-PENDING',
+  applicantName: 'XYZ',
+  documentType: 'IDENTITY_DOCUMENT',
+  timestamp: new Date().toISOString(),
+  overallRiskScore: 0,
+  overallStatus: 'LOW',
+  finalDecision: 'VERIFIED',
+  recommendedAction: 'PASS',
+  evidenceSha256: '----------------------------------------------------------------',
+  breakdown: {
+    documentTampering: {
+      id: 'dt',
+      name: 'Document Authenticity',
+      score: 0,
+      status: 'LOW',
+      weight: 35,
+      details: 'Awaiting document upload.',
+    },
+    dataConsistency: {
+      id: 'dc',
+      name: 'Data Consistency & Checksums',
+      score: 0,
+      status: 'LOW',
+      weight: 25,
+      details: 'Awaiting OCR and structural checks.',
+    },
+    faceMatch: {
+      id: 'fm',
+      name: 'Biometric Face Match',
+      score: 0,
+      status: 'LOW',
+      weight: 20,
+      details: 'Awaiting live selfie capture.',
+    },
+    liveness: {
+      id: 'lv',
+      name: 'Active 3D Liveness',
+      score: 0,
+      status: 'LOW',
+      weight: 20,
+      details: 'Awaiting liveness challenge.',
+    },
+    imageQuality: {
+      id: 'iq',
+      name: 'Image Quality Gate',
+      score: 0,
+      status: 'LOW',
+      weight: 0,
+      details: 'Awaiting document image.',
+    },
+  },
+  reasons: [DEFAULT_REASON],
+};
+
+export const EMPTY_CASE: SampleCase = {
+  id: 'empty_session',
+  name: 'New Screening Session',
+  documentType: 'IDENTITY_DOCUMENT',
+  expectedStatus: 'LOW',
+  docAnalysis: EMPTY_DOC_RESULT,
+  faceVerification: EMPTY_FACE_RESULT,
+  riskDecision: EMPTY_RISK_DECISION,
+};
+
+export const SAMPLE_CASES: SampleCase[] = [EMPTY_CASE];
