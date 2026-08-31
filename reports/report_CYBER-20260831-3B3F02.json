@@ -1,0 +1,62 @@
+{
+  "case_id": "CYBER-20260831-3B3F02",
+  "report_title": "AI FORENSIC IDENTITY SCREENING & CYBERCRIME INCIDENT DOSSIER",
+  "generated_timestamp": "2026-08-31T11:31:02.856807+00:00",
+  "submission_portal": {
+    "name": "Indian National Cyber Crime Reporting Portal (Ministry of Home Affairs)",
+    "official_url": "https://www.cybercrime.gov.in/",
+    "national_helpline": "1930 (Toll-Free 24x7)",
+    "jurisdiction": "National Cyber Crime Reporting Portal / Central Incident Repository",
+    "submission_status": "EVIDENCE_PREPARED_FOR_INVESTIGATOR_REVIEW",
+    "submission_notice": "IMPORTANT: This dossier contains algorithmic forensic evidence and digital hashes compiled for compliance audit, law enforcement referral, and official submission by authorized personnel. No automated submission to police databases has occurred without human approval."
+  },
+  "evidence_file": {
+    "filename": "uploaded_document.jpg",
+    "size_bytes": 83,
+    "sha256_digest": "4a6c725238582ee9e8baab78b6425ef9ce1c103d52899f53d6aadcc69cbfb2eb",
+    "mime_type": "image/jpeg"
+  },
+  "screening_verdict": {
+    "final_decision": "SUSPICIOUS",
+    "risk_level": "SUSPICIOUS",
+    "composite_risk_score": 0.0,
+    "tampering_score": 0.0,
+    "recommended_action": "MANUAL REVIEW REQUIRED"
+  },
+  "quality_gate": {},
+  "forensic_tampering_findings": {
+    "analysis_engine": "OpenCV / ELA Spectral Engine",
+    "anomaly_zones_detected": 0,
+    "suspicious_regions": [],
+    "forensic_flags": []
+  },
+  "extracted_ocr_data": {
+    "is_readable": false,
+    "confidence_score": 0.0,
+    "document_type": "UNKNOWN",
+    "name": null,
+    "dob": null,
+    "doc_number_masked": "N/A",
+    "expiry_date": null,
+    "address": null,
+    "gender": null
+  },
+  "aadhaar_validation": null,
+  "mrz_validation_findings": {
+    "mrz_detected": false,
+    "is_applicable": false,
+    "status": "NOT_APPLICABLE",
+    "format": "NONE",
+    "checksums_passed": true,
+    "checksum_details": []
+  },
+  "barcode_qr_findings": {
+    "detected": false,
+    "status": "NOT_FOUND",
+    "format": "NONE",
+    "cross_match_verdict": null,
+    "comparisons": [],
+    "is_genuine_proof_warning": null
+  },
+  "analyst_notes": "Case escalated for synthetic identity / document alteration review."
+}

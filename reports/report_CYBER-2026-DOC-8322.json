@@ -1,0 +1,114 @@
+{
+  "case_id": "CYBER-2026-DOC-8322",
+  "report_title": "AI FORENSIC IDENTITY SCREENING & CYBERCRIME INCIDENT DOSSIER",
+  "generated_timestamp": "2026-08-31T12:42:55.173760+00:00",
+  "submission_portal": {
+    "name": "Indian National Cyber Crime Reporting Portal (Ministry of Home Affairs)",
+    "official_url": "https://www.cybercrime.gov.in/",
+    "national_helpline": "1930 (Toll-Free 24x7)",
+    "jurisdiction": "National Cyber Crime Reporting Portal / Central Incident Repository",
+    "submission_status": "EVIDENCE_PREPARED_FOR_INVESTIGATOR_REVIEW",
+    "submission_notice": "IMPORTANT: This dossier contains algorithmic forensic evidence and digital hashes compiled for compliance audit, law enforcement referral, and official submission by authorized personnel. No automated submission to police databases has occurred without human approval."
+  },
+  "evidence_file": {
+    "filename": "WhatsApp Image 2026-08-31 at 2.19.07 PM.jpeg",
+    "size_bytes": 83,
+    "sha256_digest": "7355205106cc2a1df7073ef8c197fa3782cb61b709fb3b4a1145d8bd06a85d40",
+    "mime_type": "image/jpeg"
+  },
+  "screening_verdict": {
+    "final_decision": "HIGH RISK",
+    "risk_level": "HIGH",
+    "composite_risk_score": 75,
+    "tampering_score": 8.8,
+    "recommended_action": "REJECT / ESCALATE TO CYBER CELL"
+  },
+  "quality_gate": {},
+  "forensic_tampering_findings": {
+    "analysis_engine": "OpenCV / ELA Spectral Engine",
+    "anomaly_zones_detected": 0,
+    "suspicious_regions": [],
+    "forensic_flags": [
+      "Document Source: Physical Camera Capture. Verified via physical optical pipeline.",
+      "UIDAI 12-Digit Verhoeff Mathematical Checksum Validated (C=0).",
+      "Aadhaar layout & UIDAI sovereign text markers verified.",
+      "Extracted valid NATIONAL_ID (AADHAAR) credentials (ID: 6145 0198 0023).",
+      "Document displays consistent compression characteristics across security zones."
+    ]
+  },
+  "extracted_ocr_data": {
+    "is_readable": false,
+    "confidence_score": 0.0,
+    "document_type": "UNKNOWN",
+    "name": "AvishikarVitthal Chavan",
+    "dob": "2006-07-24",
+    "doc_number_masked": "N/A",
+    "expiry_date": null,
+    "address": null,
+    "gender": null
+  },
+  "aadhaar_validation": {
+    "is_aadhaar": true,
+    "document_type": "NATIONAL_ID (AADHAAR)",
+    "status": "VERIFIED",
+    "aadhaar_number": "6145 0198 0023",
+    "masked_aadhaar": "XXXX-XXXX-0023",
+    "is_verhoeff_valid": true,
+    "structure_checks": [
+      {
+        "name": "Aadhaar 12-Digit Format Check",
+        "passed": true,
+        "details": "Detected 12-digit Aadhaar sequence: 6145 XXXX 0023",
+        "severity": "LOW"
+      },
+      {
+        "name": "UIDAI Verhoeff Mathematical Checksum",
+        "passed": true,
+        "details": "Verhoeff check digit equation C=0 validated.",
+        "severity": "LOW"
+      },
+      {
+        "name": "Government of India / Bharat Sarkar Header",
+        "passed": true,
+        "details": "Official Government / UIDAI sovereign header detected.",
+        "severity": "LOW"
+      },
+      {
+        "name": "UIDAI Emblem & Authority Text",
+        "passed": true,
+        "details": "UIDAI authority text elements identified.",
+        "severity": "LOW"
+      },
+      {
+        "name": "Mandatory Demographic Fields (Name, DOB, Gender)",
+        "passed": true,
+        "details": "Extracted Name: AvishikarVitthal Chavan, DOB: 2006-07-24, Gender: N/A",
+        "severity": "LOW"
+      },
+      {
+        "name": "Indian 6-Digit Postal PIN Code",
+        "passed": true,
+        "details": "Detected PIN Code: 412801",
+        "severity": "LOW"
+      }
+    ],
+    "disclaimer": "Format, structural pattern, and Verhoeff checksum verified offline. Not connected to UIDAI live database (no unauthorized government authentication claimed)."
+  },
+  "mrz_validation_findings": {
+    "mrz_detected": false,
+    "is_applicable": false,
+    "status": "NOT_APPLICABLE",
+    "format": "NONE",
+    "checksums_passed": true,
+    "checksum_details": []
+  },
+  "barcode_qr_findings": {
+    "detected": false,
+    "status": "NOT_FOUND",
+    "format": "NONE",
+    "cross_match_verdict": null,
+    "comparisons": [],
+    "is_genuine_proof_warning": null
+  },
+  "analyst_notes": "Official case dossier compiled for cybercrime investigation."
+}

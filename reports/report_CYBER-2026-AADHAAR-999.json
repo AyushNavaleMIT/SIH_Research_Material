@@ -1,0 +1,79 @@
+{
+  "case_id": "CYBER-2026-AADHAAR-999",
+  "report_title": "AI FORENSIC IDENTITY SCREENING & CYBERCRIME INCIDENT DOSSIER",
+  "generated_timestamp": "2026-08-31T10:57:51.635662+00:00",
+  "submission_portal": {
+    "name": "Indian National Cyber Crime Reporting Portal (Ministry of Home Affairs)",
+    "official_url": "https://www.cybercrime.gov.in/",
+    "national_helpline": "1930 (Toll-Free 24x7)",
+    "jurisdiction": "National Cyber Crime Reporting Portal / Central Incident Repository",
+    "submission_status": "EVIDENCE_PREPARED_FOR_INVESTIGATOR_REVIEW",
+    "submission_notice": "IMPORTANT: This dossier contains algorithmic forensic evidence and digital hashes compiled for compliance audit, law enforcement referral, and official submission by authorized personnel. No automated submission to police databases has occurred without human approval."
+  },
+  "evidence_file": {
+    "filename": "suspicious_aadhaar_scan.jpg",
+    "size_bytes": 83,
+    "sha256_digest": "abcdef1234567890abcdef1234567890abcdef1234567890abcdef1234567890",
+    "mime_type": "image/jpeg"
+  },
+  "screening_verdict": {
+    "final_decision": "HIGH RISK",
+    "risk_level": "HIGH",
+    "composite_risk_score": 86.0,
+    "tampering_score": 82.5,
+    "recommended_action": "REJECT / ESCALATE TO CYBER CELL"
+  },
+  "quality_gate": {},
+  "forensic_tampering_findings": {
+    "analysis_engine": "OpenCV / ELA Spectral Engine",
+    "anomaly_zones_detected": 1,
+    "suspicious_regions": [
+      {
+        "id": "sr_1",
+        "title": "Aadhaar Number Zone Tampering",
+        "description": "Digital splicing detected around digits.",
+        "severity": "HIGH",
+        "type": "DIGITAL_SPLICING",
+        "boundingBox": {
+          "x": 25.0,
+          "y": 60.0,
+          "width": 45.0,
+          "height": 10.0
+        }
+      }
+    ],
+    "forensic_flags": [
+      "UIDAI Verhoeff Checksum FAILED (Invalid 12th digit)",
+      "Error Level Analysis shows high compression variance in Photo ID and Name fields"
+    ]
+  },
+  "extracted_ocr_data": {
+    "is_readable": false,
+    "confidence_score": 0.0,
+    "document_type": "NATIONAL_ID (AADHAAR)",
+    "name": "VIKRAM SINGH",
+    "dob": null,
+    "doc_number_masked": "XXXX-XXXX-0125",
+    "expiry_date": null,
+    "address": null,
+    "gender": null
+  },
+  "aadhaar_validation": null,
+  "mrz_validation_findings": {
+    "mrz_detected": false,
+    "is_applicable": false,
+    "status": "NOT_APPLICABLE",
+    "format": "NONE",
+    "checksums_passed": true,
+    "checksum_details": []
+  },
+  "barcode_qr_findings": {
+    "detected": false,
+    "status": "NOT_FOUND",
+    "format": "NONE",
+    "cross_match_verdict": null,
+    "comparisons": [],
+    "is_genuine_proof_warning": null
+  },
+  "analyst_notes": "Official case dossier compiled for Indian Cyber Crime Reporting Portal referral."
+}

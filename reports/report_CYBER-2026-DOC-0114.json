@@ -1,0 +1,125 @@
+{
+  "case_id": "CYBER-2026-DOC-0114",
+  "report_title": "AI FORENSIC IDENTITY SCREENING & CYBERCRIME INCIDENT DOSSIER",
+  "generated_timestamp": "2026-08-31T13:36:54.666325+00:00",
+  "submission_portal": {
+    "name": "Indian National Cyber Crime Reporting Portal (Ministry of Home Affairs)",
+    "official_url": "https://www.cybercrime.gov.in/",
+    "national_helpline": "1930 (Toll-Free 24x7)",
+    "jurisdiction": "National Cyber Crime Reporting Portal / Central Incident Repository",
+    "submission_status": "EVIDENCE_PREPARED_FOR_INVESTIGATOR_REVIEW",
+    "submission_notice": "IMPORTANT: This dossier contains algorithmic forensic evidence and digital hashes compiled for compliance audit, law enforcement referral, and official submission by authorized personnel. No automated submission to police databases has occurred without human approval."
+  },
+  "evidence_file": {
+    "filename": "WhatsApp Image 2026-08-31 at 6.09.07 PM.jpeg",
+    "size_bytes": 83,
+    "sha256_digest": "52137e320179caa42c10b86b68b0f3ddcb09be8663b04668bb2924030ffd8c1d",
+    "mime_type": "image/jpeg"
+  },
+  "screening_verdict": {
+    "final_decision": "HIGH RISK",
+    "risk_level": "HIGH",
+    "composite_risk_score": 75,
+    "tampering_score": 37.9,
+    "recommended_action": "REJECT / ESCALATE TO CYBER CELL"
+  },
+  "quality_gate": {},
+  "forensic_tampering_findings": {
+    "analysis_engine": "OpenCV / ELA Spectral Engine",
+    "anomaly_zones_detected": 1,
+    "suspicious_regions": [
+      {
+        "id": "sr_1",
+        "title": "Checksum / Structural Forgery",
+        "description": "UIDAI Verhoeff Checksum FAILED: 12th check digit does not satisfy mathematical integrity.",
+        "severity": "HIGH",
+        "type": "FONT_MISMATCH",
+        "boundingBox": {
+          "x": 20,
+          "y": 40,
+          "width": 60,
+          "height": 30
+        }
+      }
+    ],
+    "forensic_flags": [
+      "Document Source: Physical Camera Capture. Verified via physical optical pipeline.",
+      "UIDAI Verhoeff Checksum FAILED: 12th check digit does not satisfy mathematical integrity."
+    ]
+  },
+  "extracted_ocr_data": {
+    "is_readable": false,
+    "confidence_score": 0.0,
+    "document_type": "UNKNOWN",
+    "name": "RRR",
+    "dob": null,
+    "doc_number_masked": "N/A",
+    "expiry_date": null,
+    "address": null,
+    "gender": null
+  },
+  "aadhaar_validation": {
+    "is_aadhaar": true,
+    "document_type": "NATIONAL_ID (AADHAAR)",
+    "status": "SUSPICIOUS",
+    "aadhaar_number": "9876 5432 1098",
+    "masked_aadhaar": "XXXX-XXXX-1098",
+    "is_verhoeff_valid": false,
+    "structure_checks": [
+      {
+        "name": "Aadhaar 12-Digit Format Check",
+        "passed": true,
+        "details": "Detected 12-digit Aadhaar sequence: 9876 XXXX 1098",
+        "severity": "LOW"
+      },
+      {
+        "name": "UIDAI Verhoeff Mathematical Checksum",
+        "passed": false,
+        "details": "Verhoeff 12th check digit mismatch! Possible synthetic or mistyped Aadhaar number.",
+        "severity": "HIGH"
+      },
+      {
+        "name": "Government of India / Bharat Sarkar Header",
+        "passed": false,
+        "details": "Missing standard Government of India header text.",
+        "severity": "MEDIUM"
+      },
+      {
+        "name": "UIDAI Emblem & Authority Text",
+        "passed": false,
+        "details": "UIDAI authority markers not detected.",
+        "severity": "MEDIUM"
+      },
+      {
+        "name": "Mandatory Demographic Fields (Name, DOB, Gender)",
+        "passed": false,
+        "details": "Extracted Name: RRR, DOB: N/A, Gender: N/A",
+        "severity": "MEDIUM"
+      },
+      {
+        "name": "Indian 6-Digit Postal PIN Code",
+        "passed": false,
+        "details": "Postal PIN code not detected in address visual zone.",
+        "severity": "MEDIUM"
+      }
+    ],
+    "disclaimer": "Format, structural pattern, and Verhoeff checksum verified offline. Not connected to UIDAI live database (no unauthorized government authentication claimed)."
+  },
+  "mrz_validation_findings": {
+    "mrz_detected": false,
+    "is_applicable": false,
+    "status": "NOT_APPLICABLE",
+    "format": "NONE",
+    "checksums_passed": true,
+    "checksum_details": []
+  },
+  "barcode_qr_findings": {
+    "detected": false,
+    "status": "NOT_FOUND",
+    "format": "NONE",
+    "cross_match_verdict": null,
+    "comparisons": [],
+    "is_genuine_proof_warning": null
+  },
+  "analyst_notes": "Official case dossier compiled for cybercrime investigation."
+}
